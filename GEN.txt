@@ -1,0 +1,46 @@
+GE0/0/13(100.72.2.92)GE0/0/3[SELF LOOP]GE0/0/4---QNQ ID:2167---->>BE5.195XXXX(100.70.3.15)<<<>>>VPE
+
+GE0/0/17(119.227.166.210)GE0/0/1[SELF LOOP]GE0/0/28-------> 
+
+GE0/0/6(100.72.6.121)GE0/0/3[SELF LOOP]GE0/0/4---QNQ ID:3022------>>BE7.3022126(100.70.3.16)IPE
+GE0/0/1(100.70.17.234)GE0/0/3[SELF LOOP]GE0/0/4---QNQ ID:200------>>Gi0/0/1.200XXX(124.7.0.44)VPE
+
+Fa0/3(124.7.238.55)Fa0/14--->GE0/0/11(124.7.238.55)GE0/0/1--->GE0/0/11---GE0/0/1---(124.7.147.226)RTR---GE0/0/1
+
+
+BANGALORE-MANGALORE Link High Latency || 2.5G Link  || 
+
+
+1st Level update within 30mins
+Dear Valued Customer,
+
+Our sincere apologies for the inconvenience caused due to the reported issue. We acknowledge your ticket and the same is being reviewed. Our experts are working on the same for a faster resolution. We shall update you on the progress in a short while.
+
+We will get back to you shortly with an update on the same. Expected Time for Resolution is 4 Hours.
+
+Regards
+Sify
+2nd Level update if the issue is identified
+Dear Customer,
+We sincerely regret the inconvenience caused !!
+
+Link is affected due to BSO media issue , we will update shortly.  or e have aligned Engineer at Uplink BSTN end to Verify the same
+ETR 15:30 IST 
+Regards
+Sify
+3rd Level update (If there is challenge to resolve the issue within given ETR)
+Dear Customer,
+We sincerely regret the inconvenience caused !!
+Our Back end team is continuously following-up with backbone provider and same has been escalated to top managed of backbone provider for faster resolution.
+
+We will keep you posted on the same accordingly.
+ETR 13:00 IST
+Regards,
+Sify
+4th Level update (If the issue is resolved)
+Dear Customer,
+   BSTN Services are restored  11:03 IST(28/02/2022)  and link is up now. Kindly check the services and confirm to us
+RFO : We have observed that network Device connecting Power cord was Faulty.
+RCA : Power cord was replaced
+Regards,
+ Sify

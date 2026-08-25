@@ -1,0 +1,60 @@
+aws
+
+1 creat server 
+2,create target group
+3,create load balancer 
+4,create lounch template
+5,create auto scaling 
+6,attach load balancer 
+7,put stress command 
+
+apt-get update 
+apt-get install apache2 -y
+apt-get install stress 
+top
+stress --cpu3&
+
+check health and how many server created 
+
+2..
+
+create vpc mytestvpc
+cidr 10.0.0.0/24
+
+create subnet from vpc 
+mypubsubnet 
+10.0.0.0/28
+
+ad subnet2
+mypvtsubnet
+10.0.0.128/28
+
+CREATE ROUTE TABLE FOR PVTSUBNET
+ASSOCIate pvtsubnet 
+
+create route and do subnet association for pub 
+
+create IG attache vpc
+and attach IG in route table 
+
+ADD route table for PUB  subnet 0.0.0.0
+
+1connect the public server 
+commands 
+sudo -l
+cat > key.pem
+cat key
+chmode 0400 key.pem
+
+ssh -i key,pem ubuntu@pvt ip 
+
+create natgateway with pubsub and allocate elastic ip 
+
+riyazuser
+3wLo#E3+
+
+arn:arn:aws:iam::513129860920:role/riyazrole
+
+Console sign-in link
+
+https://513129860920.signin.aws.amazon.com/console

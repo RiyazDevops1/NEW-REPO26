@@ -1,0 +1,37 @@
+display transceiver interface gi0/0/11 verbose
+
+
+dis tra int gi0/0/20 ver (for power level )
+sh contrr  int (for power level )
+
+dis mac-address dynamic g0/0/7
+dis mac-address dynamic vlan 138
+dis cur int g 0/0/15
+dis cur int g 0/0/16
+dis vlan 2509
+display logfile | include GigabitEthernet0/0/27|UP|DOWN
+sh int BE7.3632662 | i rat
+dis ver | i up
+sh policy-map int BE8.1912371
+sh bgp sum | i 1.6.121.239
+
+show mac-address-table vlan 432
+
+To check logs in EdgeCore Switch
+
+sh log ram
+
+for asr int power checking 
+
+show hw-module interface [interface-number] transceiver stat
+
+CE port uptime: show interfaces status eth 1/2
+Information of Eth 1/2
+
+DIOS LLDP NE 
+DIS LLDP NE INT 0/0/11
+
+IN EDGE COR 
+
+SH LLDP INFO REMOTE DETAILS ETHERNET
+ 

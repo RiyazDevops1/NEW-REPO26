@@ -1,0 +1,49 @@
+Lmg2@25in#10
+
+login : ssh 020524@1.7.0.248
+ 	telnet (ip)
+
+sh int des | i 4208290416
+sh run int BE16.1902432
+sh arp | i Bundle-Ether16.1902432
+ping 119.226.60.118 (dynamic)
+ping 119.226.60.118 re 500 si 1024
+ping 8.8.8.8
+show ip arp |
+
+Basic ILL Troubleshooting Flow
+
+show ip interface brief → Interface up?
+show interface → Errors?
+show ip route → Default route present?
+ping next-hop → Reachable?
+ping 8.8.8.8 → Internet reachable?
+
+
+mpls commands
+show ip interface brief
+show interface GigabitEthernet0/0/0
+show mpls interfaces
+ping	 vrf 1503-LIFESTYLE-Mesh 192.168.201.10
+sh arp vrf  1503-LIFESTYLE-Mesh | include 192.168.6.54
+sh policy-map int Po7.2576657 | i rate
+show mpls forwarding-table
+sh ip bgp all summ | i 192.168.177.66
+ping vrf 1503-LIFESTYLE-Mesh 192.1$ 192.16                          8.209.170p
+
+Quick MPLS Troubleshooting Flow
+show ip interface brief → Physical up?
+show mpls ldp neighbor → LDP up?
+show ip bgp summary → BGP established?
+show ip route vrf → Route present?
+ping vrf → Reachable?
+
+
+Firewall
+
+exe ping-options source ip
+exe ping 192.168.173.17(default gateway)
+
+
+sh bgp vrf 1503-LIFESTYLE-Mesh
+sh policy-map int BE15.1755149
