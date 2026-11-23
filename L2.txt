@@ -1,0 +1,195 @@
+G0/0/7(100.70.250.26)GE0/0/15[SELF LOOP]GE0/0/16--QNQ ID:2509-->>BE9.2509XXX(100.70.3.15)<<>>VPE
+
+
+LOGIN CUSTOMER SWITCH
+
+dis mac-address dynamic g0/0/7 (AP PORT)
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis mac-address dynamic g0/0/7
+-------------------------------------------------------------------------------
+MAC Address    VLAN/VSI                          Learned-From        Type
+-------------------------------------------------------------------------------
+20fd-f1e0-7e13 138/-                             GE0/0/7             dynamic
+84f1-474a-6938 334/-                             GE0/0/7             dynamic
+1416-9da2-8e82 651/-                             GE0/0/7             dynamic
+70db-9817-6241 651/-                             GE0/0/7             dynamic
+0002-6fe8-a7b1 782/-                             GE0/0/7             dynamic
+50fe-f202-1b79 782/-                             GE0/0/7             dynamic
+50fe-f202-1bf0 782/-                             GE0/0/7             dynamic
+50fe-f202-4a0c 782/-                             GE0/0/7             dynamic
+50fe-f202-4a0d 782/-                             GE0/0/7             dynamic
+50fe-f202-752a 782/-                             GE0/0/7             dynamic
+50fe-f202-8c7f 782/-                             GE0/0/7             dynamic
+88dc-9601-0e5b 782/-                             GE0/0/7             dynamic
+
+-------------------------------------------------------------------------------
+Total items displayed = 12
+
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis mac-address dynamic vlan 138
+-------------------------------------------------------------------------------
+MAC Address    VLAN/VSI                          Learned-From        Type
+-------------------------------------------------------------------------------
+20fd-f1e0-7e13 138/-                             GE0/0/7             dynamic
+34ed-1b18-c4aa 138/-                             GE0/0/15            dynamic
+
+-------------------------------------------------------------------------------
+Total items displayed = 2
+
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis cur
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis cur int g 0/0/15
+#
+interface GigabitEthernet0/0/15
+ undo negotiation auto
+ description XCNTSELF_US57_ABS_01_GE0/0/16_[C-TAG]
+ set flow-stat interval 30
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ port trunk allow-pass vlan 131 133 138 146 156 158 to 159 164 180 182 to 184 264
+ port trunk allow-pass vlan 276 295 299 333 to 334 342 345 353 356 368 384
+ port trunk allow-pass vlan 389 to 390 402 422 433 443 445 447 454 456 470
+ port trunk allow-pass vlan 526 567 595 602 to 603 607 614 651 to 652 655 667 673
+ port trunk allow-pass vlan 687 697 711 to 712 748 780 to 783 855 920 967 971 1103
+ port trunk allow-pass vlan 1456 1528 2378 3277 3461 3641 3784 3899 3923
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+return
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis cur int g 0/0/16
+#
+interface GigabitEthernet0/0/16
+ description XCNTSELF_US57_ABS_01_GE0/0/15_[S-TAG]
+ set flow-stat interval 30
+ port link-type hybrid
+ qinq vlan-translation enable
+ undo port hybrid vlan 1
+ port hybrid untagged vlan 2509 to 2510
+ port vlan-stacking vlan 131 stack-vlan 2509
+ port vlan-stacking vlan 138 stack-vlan 2509
+ port vlan-stacking vlan 146 stack-vlan 2509
+ port vlan-stacking vlan 156 stack-vlan 2509
+ port vlan-stacking vlan 159 stack-vlan 2509
+ port vlan-stacking vlan 180 stack-vlan 2509
+ port vlan-stacking vlan 182 stack-vlan 2509
+ port vlan-stacking vlan 183 stack-vlan 2509
+ port vlan-stacking vlan 264 stack-vlan 2509
+ port vlan-stacking vlan 276 stack-vlan 2509
+ port vlan-stacking vlan 334 stack-vlan 2509
+ port vlan-stacking vlan 342 stack-vlan 2509
+ port vlan-stacking vlan 345 stack-vlan 2509
+ port vlan-stacking vlan 353 stack-vlan 2509
+ port vlan-stacking vlan 356 stack-vlan 2509
+ port vlan-stacking vlan 368 stack-vlan 2509
+ port vlan-stacking vlan 384 stack-vlan 2509
+ port vlan-stacking vlan 402 stack-vlan 2509
+ port vlan-stacking vlan 433 stack-vlan 2509
+ port vlan-stacking vlan 443 stack-vlan 2509
+ port vlan-stacking vlan 445 stack-vlan 2509
+ port vlan-stacking vlan 447 stack-vlan 2509
+ port vlan-stacking vlan 456 stack-vlan 2509
+ port vlan-stacking vlan 470 stack-vlan 2509
+ port vlan-stacking vlan 526 stack-vlan 2509
+ port vlan-stacking vlan 567 stack-vlan 2509
+ port vlan-stacking vlan 595 stack-vlan 2509
+ port vlan-stacking vlan 603 stack-vlan 2509
+ port vlan-stacking vlan 607 stack-vlan 2509
+ port vlan-stacking vlan 614 stack-vlan 2509
+ port vlan-stacking vlan 651 stack-vlan 2509
+ port vlan-stacking vlan 652 stack-vlan 2509
+ port vlan-stacking vlan 655 stack-vlan 2509
+ port vlan-stacking vlan 667 stack-vlan 2509
+ port vlan-stacking vlan 673 stack-vlan 2509
+ port vlan-stacking vlan 687 stack-vlan 2509
+ port vlan-stacking vlan 697 stack-vlan 2509
+ port vlan-stacking vlan 855 stack-vlan 2509
+ port vlan-stacking vlan 967 stack-vlan 2509
+ port vlan-stacking vlan 971 stack-vlan 2509
+ port vlan-stacking vlan 1456 stack-vlan 2509
+ port vlan-stacking vlan 1528 stack-vlan 2509
+ port vlan-stacking vlan 2378 stack-vlan 2509
+ port vlan-stacking vlan 3121 stack-vlan 2509
+ port vlan-stacking vlan 3277 stack-vlan 2509
+ port vlan-stacking vlan 3641 stack-vlan 2509
+ port vlan-stacking vlan 3784 stack-vlan 2509
+ port vlan-stacking vlan 3923 stack-vlan 2509
+ port vlan-stacking vlan 333 stack-vlan 2510
+ port vlan-stacking vlan 422 stack-vlan 2510
+ port vlan-stacking vlan 602 stack-vlan 2510
+ port vlan-stacking vlan 920 stack-vlan 2510
+ port vlan-stacking vlan 132 stack-vlan 2511
+ stp bpdu-filter enable
+ stp edged-port enable
+#
+return
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>dis vlan 2509
+--------------------------------------------------------------------------------
+U: Up;         D: Down;         TG: Tagged;         UT: Untagged;
+MP: Vlan-mapping;               ST: Vlan-stacking;
+#: ProtocolTransparent-vlan;    *: Management-vlan;
+--------------------------------------------------------------------------------
+
+VID  Type    Ports
+--------------------------------------------------------------------------------
+2509 common  UT:GE0/0/16(U)
+             TG:GE0/0/24(U)     GE0/0/27(U)     Eth-Trunk3(U)
+             ST:GE0/0/16(U)
+
+VID  Status  Property      MAC-LRN Statistics Description
+--------------------------------------------------------------------------------
+2509 enable  default       enable  disable    BNG_RCH_BVPN_2509_STAG
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>[SSH] ERROR: Received disconnect from 100.70.250.26 port 22:2: The connection is closed by SSH server
+
+
+
+[SSH] INFO: DISCONNECT
+
+
+[SSH] Server Version -
+[SSH] Encryption used: aes128-ctr
+[SSH] INFO: Host Banner
+
++---------------------------------------------------------------+
+| This system is for the use of authorized users only.          |
+|Individuals using this system without authority or in excess   |
+|of their authority are subject to having all of the activities |
+|on this system monitored and recorded by system personnel.     |
++---------------------------------------------------------------+
+                  RAICHUR-BSTN-SWT
+
+
+
+
+[SSH] Logged in (got response for 100.70.250.26 from saved passwords)
+
+
+Info: The max number of VTY users is 20, and the number
+      of current VTY users on line is 1.
+      The current login time is 2024-06-20 16:50:46+05:30.
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>D I D
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>DIS VLAN 2510
+--------------------------------------------------------------------------------
+U: Up;         D: Down;         TG: Tagged;         UT: Untagged;
+MP: Vlan-mapping;               ST: Vlan-stacking;
+#: ProtocolTransparent-vlan;    *: Management-vlan;
+--------------------------------------------------------------------------------
+
+VID  Type    Ports
+--------------------------------------------------------------------------------
+2510 common  UT:GE0/0/16(U)
+             TG:GE0/0/24(U)     GE0/0/27(U)     Eth-Trunk3(U)
+             ST:GE0/0/16(U)
+
+VID  Status  Property      MAC-LRN Statistics Description
+--------------------------------------------------------------------------------
+2510 enable  default       enable  disable    BNG_RCH_BINT_2510_STAG
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>DIS VLAN 2511
+Error: The VLAN does not exist.
+<KA-RCH-RCA-T3-AL-SBS-US57-S01>[SSH] ERROR: Received disconnect from 100.70.250.26 port 22:2: The connection is closed by SSH server
